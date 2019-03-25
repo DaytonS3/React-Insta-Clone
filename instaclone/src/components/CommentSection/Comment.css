@@ -1,0 +1,15 @@
+.CommentSection {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    
+}
+
+.name {
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.Comment {
+    margin-bottom: 2px;
+}
