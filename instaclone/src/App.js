@@ -5,10 +5,19 @@ import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends React.Component {
-  state={
-    data: dummyData
+  constructor(){
+    super();
+    this.state={
+    data: []
+    }
+  }
+  
+  componentDidMount() {
+    this.setState({ data: dummyData });
+    
   }
 
+  
 
 
   render() {
@@ -20,8 +29,11 @@ class App extends React.Component {
         ))}
         
       </div>
+      
     );
+    
   }
+  
 }
 
 export default App;
