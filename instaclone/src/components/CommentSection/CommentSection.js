@@ -1,31 +1,57 @@
 import React from 'react';
 import './Comment.css'
+import Comment from './Comment';
+import Input from './Input';
 
 class CommentSection extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            comments: 'hello'
+            comments: [],
+            input: ''
         }
     }
+
     componentDidMount() {
         this.setState({
             comments: this.props.data.comments
-        }) 
+        })  
+    }
 
+    addComment = (e, index) => {
+        e.preventDefault();
+        
+        const NewComment = {text: this.state.input, username: 'Random'};
+        
         
 
-        
+        this.setState({
+           comments: [...this.state.comments, NewComment],
+           input: ''
+        })
+    }
+
+    handleChange = (e) => {
+        this.setState({ input: e.target.value})
+        console.log(e.target.value)
     }
 
     render(){
-        console.log(this.props.props)
+        
     return(
-        <div className="CommentSection">
-           <p className="name">{this.props.texts.username}</p>
-            <p className="Comment">{this.props.texts.text}</p> 
+        
+        <div className="CommentContainer">
+            {this.state.comments.map((text) => <Comment  key={Math.random()}text={text} />)}
+            
+            <Input text={this.state.comments}
+             handle={this.handleChange}
+             addComment={this.addComment}
+             />
+        
+           
         </div>
+        
         
     )
  }
