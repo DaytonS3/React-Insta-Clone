@@ -1,0 +1,57 @@
+.Container {
+    margin-bottom: 20px;
+    width: 450px;
+    margin-left: 300px;
+}
+
+.Content {
+    background: white;
+    padding: 3px;
+}
+
+.Username {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.Thumbnail {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+}
+
+.PostImg {
+    height: 450px;
+    width: 100%;
+}
+
+.actionBtns {
+    display: flex;
+    align-items: center;
+}
+
+.likeBtn {
+    margin: 10px 10px 10px 0;
+}
+
+.Likes {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.time {
+    font-size: 10px;
+    color: grey;
+    margin: 2px 10px;
+}
+
+.addComment {
+    margin-left: 10px;
+    border: none;
+    margin-top: 10px;
+}
