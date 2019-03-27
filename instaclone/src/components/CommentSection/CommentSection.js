@@ -22,7 +22,7 @@ class CommentSection extends React.Component {
     addComment = (e, index) => {
         e.preventDefault();
         
-        const NewComment = {text: this.state.input, username: 'Random'};
+        const NewComment = {text: this.state.input, username: 'DaytonSteinmeyer'};
         
         
 
@@ -38,7 +38,7 @@ class CommentSection extends React.Component {
     }
 
     render(){
-        
+        console.log('props',this.props.data)
     return(
         
         <div className="CommentContainer">

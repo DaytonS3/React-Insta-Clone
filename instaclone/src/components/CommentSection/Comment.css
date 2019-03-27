@@ -13,3 +13,9 @@
 .Comment {
     margin-bottom: 2px;
 }
+
+input {
+    margin-left: 10px;
+    border: none;
+    margin-top: 10px;
+}
