@@ -3,6 +3,7 @@ import dummyData from './dummy-data';
 import './App.css';
 import PostPage from './components/PostContainer/PostPage';
 import withAuthenticate from './components/Authentication/withAuthenticate';
+import Login from './components/Login/Login';
 
  const ComponentFromWithAuthenticate = withAuthenticate(PostPage);
 
@@ -53,7 +54,7 @@ class App extends React.Component {
         filter={this.state.filter}
         />
         
-        
+        <Login />
       </div>
       
     );

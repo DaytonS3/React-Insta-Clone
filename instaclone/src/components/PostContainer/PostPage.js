@@ -5,7 +5,7 @@ import PostContainer from './PostContainer';
 
 
 const PostPage = props => {
-    console.log({props})
+    
     return(
         <div>
             <SearchBar
