@@ -2,6 +2,9 @@ import React from 'react';
 import dummyData from './dummy-data';
 import './App.css';
 import PostPage from './components/PostContainer/PostPage';
+import withAuthenticate from './components/Authentication/withAuthenticate';
+
+ const ComponentFromWithAuthenticate = withAuthenticate(PostPage);
 
 class App extends React.Component {
   constructor(){
@@ -18,6 +21,7 @@ class App extends React.Component {
     
   }
 
+   
   
 
   searchTerm = e => {
@@ -37,12 +41,12 @@ class App extends React.Component {
 
   render() {
     
-    console.log(this.state.filter)
+    
 
     
     return (
       <div className="App">
-        <PostPage
+        <ComponentFromWithAuthenticate
         searchTerm={this.searchTerm}
         handle={this.submithandle}
         data={this.state.data}

@@ -3,8 +3,9 @@ import './postContainer.css'
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 
+
 const PostPage = props => {
-    console.log(props)
+    console.log({props})
     return(
         <div>
             <SearchBar
@@ -21,4 +22,4 @@ const PostPage = props => {
     )
 }
 
-export default PostPage;
+export default PostPage ;
