@@ -1,8 +1,7 @@
 import React from 'react';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
+import PostPage from './components/PostContainer/PostPage';
 
 class App extends React.Component {
   constructor(){
@@ -19,7 +18,7 @@ class App extends React.Component {
     
   }
 
-   
+  
 
   searchTerm = e => {
     
@@ -43,16 +42,13 @@ class App extends React.Component {
     
     return (
       <div className="App">
-        <SearchBar
+        <PostPage
         searchTerm={this.searchTerm}
         handle={this.submithandle}
+        data={this.state.data}
+        filter={this.state.filter}
         />
-        {this.state.data.map(data => (
-          <PostContainer key={data.username} data={
-             this.state.filter === '' ? data : this.state.filter[0]
-          }
-          />
-        ))}
+        
         
       </div>
       
