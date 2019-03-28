@@ -1,6 +1,26 @@
 import React from 'react';
+import styled from 'styled-components'
 
-
+const LoginContainer = styled.div`
+    width: 350px;
+    background: lightgrey;
+    margin: 0 auto;
+    border-radius: 5px;
+    position: absolute;
+    top: 200px;
+    right: 270px;
+`
+const LoginContent = styled.div`
+    text-align: center;
+    
+`
+const LoginInput = styled.input`
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+    color: white;
+    margin-bottom: 10px;
+`
 
 class Login extends React.Component {
     constructor() {
@@ -25,26 +45,27 @@ class Login extends React.Component {
 
     render(){
         return(
-            <div className="LoginContainer">
-                <h1>LoginPage</h1>
-                <div>
+            <LoginContainer>
+                
+                <LoginContent>
+                    <h1>Instagram</h1>
                     <form>
-                        <input type="text" 
+                        <LoginInput type="text" 
                         value={this.state.username} 
                         placeholder="Username" 
                         onChange={e => this.setState({username: e.target.value})}
                         />
-                        <input type="text"
+                        <LoginInput type="text"
                         value={this.state.password} 
                         placeholder="Password" 
                         onChange={e => this.setState({password: e.target.value})}
                         />
                     </form>
                     <button onClick={() => this.onSubmit()}>Login</button>
-                </div>
+                </LoginContent>
 
 
-            </div>
+            </LoginContainer>
         )
     }
 }
