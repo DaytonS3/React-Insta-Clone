@@ -14,7 +14,11 @@ class Login extends React.Component {
 
    
     onSubmit = (e) => {
-        
+        const username = this.state.username;
+        const password = this.state.password;
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+        window.location.reload();
         
     }
      
