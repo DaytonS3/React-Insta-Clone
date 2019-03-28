@@ -18,7 +18,7 @@ const LoginInput = styled.input`
     border: none;
     border-bottom: 2px solid black;
     background: transparent;
-    color: white;
+    color: black;
     margin-bottom: 10px;
 `
 
@@ -55,7 +55,7 @@ class Login extends React.Component {
                         placeholder="Username" 
                         onChange={e => this.setState({username: e.target.value})}
                         />
-                        <LoginInput type="text"
+                        <LoginInput type="password"
                         value={this.state.password} 
                         placeholder="Password" 
                         onChange={e => this.setState({password: e.target.value})}

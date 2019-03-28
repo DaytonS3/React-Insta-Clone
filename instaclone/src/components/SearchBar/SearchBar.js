@@ -20,6 +20,10 @@ const Input = styled.input`
     text-align: center;
 
 `
+const SearchHeader = styled.p`
+    margin-bottom: 0px;
+    
+`
 
 const SearchBar = props => {
     
@@ -27,7 +31,7 @@ const SearchBar = props => {
         <Headers>
             
                 <i className="fab fa-instagram"></i>
-                <p>Instagram</p>
+                <SearchHeader>Instagram</SearchHeader>
             
             <form onSubmit={props.handle}>
                <Input  

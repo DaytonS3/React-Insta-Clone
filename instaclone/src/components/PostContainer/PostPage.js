@@ -11,10 +11,8 @@ const PostPage = props => {
         searchTerm={props.searchTerm}
         handle={props.handle}
         />
-        {props.data.map(data => (
-          <PostContainer key={props.data.username} data={
-             props.filter === '' ? data : props.filter[0]
-          }
+        {props.filter.map(post => (
+          <PostContainer key={post.username} data={post}
           />
         ))}
         </div>
