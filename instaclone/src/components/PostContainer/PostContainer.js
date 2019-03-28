@@ -1,6 +1,47 @@
 import React from 'react';
-import './postContainer.css'
+import styled from 'styled-components'
 import CommentSection from '../CommentSection/CommentSection';
+
+
+const Container = styled.div`
+    width: 450px;
+    margin-left: 250px;
+`
+
+const Content = styled.div`
+    background: white;
+    padding: 3px;
+`
+const Username = styled.div`
+    display: flex;
+    padding: 10px;
+`
+const ActionBtns = styled.div`
+display: flex;
+align-items: center;
+`
+
+const ImageThumb = styled.img`
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+`
+const ImagePost = styled.img`
+    height: 450px;
+    width: 100%;
+`
+const Likes = styled.p`
+    font-size: 12px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+`
+const Time = styled.p`
+    font-size: 10px;
+    color: grey;
+    margin: 2px 10px;
+`
 
 class PostContainer extends React.Component {
     constructor(props){
@@ -19,29 +60,29 @@ class PostContainer extends React.Component {
 
     render(){
         return(
-        <div className="Container">
-            <div className="Content">
-                <div className="Username"> 
-                    <img className="Thumbnail" alt="thumbnail" src={this.props.data.thumbnailUrl} />
+        <Container>
+            <Content>
+                <Username> 
+                    <ImageThumb alt="thumbnail" src={this.props.data.thumbnailUrl} />
                     <p>{this.props.data.username}</p>
-                </div>
+                </Username>
             
                 
-                <img className="PostImg" alt="post" src={this.props.data.imageUrl}/>
-                <div className="actionBtns">
+                <ImagePost alt="post" src={this.props.data.imageUrl}/>
+                <ActionBtns>
                     <i onClick={this.handleButtonClick} className="far fa-heart"></i>
                     <i className="far fa-comment"></i>
-                </div>
-                <p className="Likes">{this.state.count} Likes</p>
+                </ActionBtns>
+                <Likes>{this.state.count} Likes</Likes>
             
                 <CommentSection data={this.props.data} key={Math.random()} />
                 
                 
-                <p className="time">{this.props.data.timestamp}</p>
+                <Time>{this.props.data.timestamp}</Time>
                 
-                </div>
+                </Content>
             
-        </div>
+        </Container>
     ) 
   }
    

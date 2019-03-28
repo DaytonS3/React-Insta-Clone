@@ -1,5 +1,4 @@
 import React from 'react';
-import './postContainer.css'
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 
