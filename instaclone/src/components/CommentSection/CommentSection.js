@@ -1,5 +1,4 @@
 import React from 'react';
-import './Comment.css'
 import Comment from './Comment';
 import Input from './Input';
 

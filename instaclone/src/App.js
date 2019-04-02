@@ -12,13 +12,16 @@ class App extends React.Component {
     super();
     this.state={
     data: [],
-    filter: '',
+    filter: [],
     searchInput: ''
     }
   }
   
   componentDidMount() {
-    this.setState({ data: dummyData });
+    this.setState({ 
+      data: dummyData,
+      filter: dummyData
+    });
     
   }
 
@@ -33,7 +36,10 @@ class App extends React.Component {
     submithandle = (e) => {
       e.preventDefault();
       const filtered = this.state.data.filter(p => 
-        p.username === this.state.searchInput
+        { if(!this.state.searchInput){
+          return true
+        }
+          return p.username === this.state.searchInput}
       )
       this.setState({
         filter: filtered
