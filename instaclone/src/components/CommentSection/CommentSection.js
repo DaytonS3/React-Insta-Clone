@@ -34,11 +34,11 @@ class CommentSection extends React.Component {
 
     handleChange = (e) => {
         this.setState({ input: e.target.value})
-        console.log(e.target.value)
+        
     }
 
     render(){
-        console.log('props',this.props.data)
+        
     return(
         
         <div className="CommentContainer">
